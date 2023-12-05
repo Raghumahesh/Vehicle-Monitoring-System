@@ -8,7 +8,7 @@ import dlib
 
 dataset_1 = cv2.CascadeClassifier(r'Vehicle-monitoring\dataset\cars.xml')
 dataset_2 = cv2.CascadeClassifier(r'Vehicle-monitoring\dataset\myhaar.xml')
-video_c = cv2.VideoCapture(r'VVehicle-monitoring\videos\cars.mp4')  # video
+video_c = cv2.VideoCapture(r'Vehicle-monitoring\videos\cars.mp4')  # video
 
 
 def vehicle_speed(side1, side2):
