@@ -18,7 +18,7 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1000 * 1000
 
 input = ""
-ALLOWED_VIDEO_EXTENSIONS = {"mkv", "mp4"}
+ALLOWED_VIDEO_EXTENSIONS = {"mkv", "mp4", "avi"}
 
 
 def file_allowed(filename):
