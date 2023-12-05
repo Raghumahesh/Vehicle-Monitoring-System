@@ -77,8 +77,8 @@ def vehicle_speed(side1, side2):
 
 def gen():
 
-    dataset_1 = cv2.CascadeClassifier(r"V-core\dataset\cars.xml")
-    dataset_2 = cv2.CascadeClassifier(r"V-core\dataset\myhaar.xml")
+    dataset_1 = cv2.CascadeClassifier(r"Vehicle-monitoring\dataset\cars.xml")
+    dataset_2 = cv2.CascadeClassifier(r"Vehicle-monitoring\dataset\myhaar.xml")
 
     global input
     inp = os.path.join(app.config["UPLOAD_FOLDER"], input)
@@ -152,7 +152,7 @@ def gen():
                 )
 
                 with open(
-                    r"V-core\dataset\vehicle.csv" and r"V-core\dataset\cars.csv", "a", newline=""
+                    r"Vehicle-monitoring\dataset\vehicle.csv" and r"Vehicle-monitoring\dataset\cars.csv", "a", newline=""
                 ) as f_object:  # 2 more dataset to increase detection accuracy from kagggle
 
                     for (x, y, w, h) in cars:
