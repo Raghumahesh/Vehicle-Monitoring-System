@@ -6,9 +6,22 @@ import math
 import dlib
 
 
-dataset_1 = cv2.CascadeClassifier(r'V-core\dataset\cars.xml')
-dataset_2 = cv2.CascadeClassifier(r'V-core\dataset\myhaar.xml')
-video_c = cv2.VideoCapture(r'V-core\videos\cars.mp4')  # video
+dataset_1 = cv2.CascadeClassifier(r'Vehicle-monitoring\dataset\cars.xml')
+dataset_2 = cv2.CascadeClassifier(r'Vehicle-monitoring\dataset\myhaar.xml')
+video_c = cv2.VideoCapture(r'Vehicle-monitoring\videos\cars.mp4')  # video
+
+
+def vehicle_speed(side1, side2):
+    # pixels = math.sqrt(si1[0] + si2[1])
+    pixels = math.sqrt(
+        math.pow(side2[0] - side1[0], 2) + math.pow(side2[1] - side1[1], 2)
+    )
+    # Netpbm color image format -> lowest common denominator color image file format.
+    ppm = 16.8      # pixels per minute
+    meters = pixels / ppm
+    fps = 18
+    speed = meters * fps * 3.6
+    return speed
 
 
 def multiple_car_tracker():
