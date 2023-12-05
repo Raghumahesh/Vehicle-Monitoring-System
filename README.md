@@ -6,7 +6,7 @@ Flask
 Dlib
 Numpy
 
-#Clone Repository
+# Clone Repository
 git clone 
 cd (change directory) into cd Vehicle-monitoring
 
