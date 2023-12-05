@@ -9,8 +9,6 @@ import dlib
 dataset_1 = cv2.CascadeClassifier(r'V-core\dataset\cars.xml')
 dataset_2 = cv2.CascadeClassifier(r'V-core\dataset\myhaar.xml')
 video_c = cv2.VideoCapture(r'V-core\videos\cars.mp4')  # video
-# video_c = cv2.VideoCapture(r'V-core\carsVid.mp4')
-
 
 def vehicle_speed(side1, side2):
     # pixels = math.sqrt(si1[0] + si2[1])
